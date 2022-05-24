@@ -25,8 +25,11 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-  let newArr = starWarsArr.height.sort('');
-  return newArr;
+  let newArr = starWarsArr.forEach((i) => {
+    let heightArr = i.height;
+    return heightArr;
+  });
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,9 +39,19 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  // Solution code here...
+  let newArr = [];
+  arr.forEach(i => {
+    if ((arr[i] === idx) && (arr[i] === idx + 3)) {
+      return arr.splice(i);
+    }
+    else {
+      return newArr.push(i);
+    }
+  });
+  console.log(newArr);
 };
 
+//Gets the three values sliced out, but only returns the sliced elements
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -65,9 +78,10 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  let newStr = str.split('');
-  let sent = newStr.map('').slice(1);
-  result.push(sent);
+  for (let i = 0; i < str.length + 1; i++) {
+    result.push(str.slice(i));
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -127,7 +141,11 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach(i => {
+    let withoutAmt = i.slice(i.indexOf(' ') + 1);
+    let withoutUnit = withoutAmt.slice(withoutAmt.indexOf(' ') + 1);
+    result.push(withoutUnit);
+  });
   return result;
 };
 

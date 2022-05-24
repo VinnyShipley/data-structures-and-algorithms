@@ -9,7 +9,7 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -19,15 +19,12 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = {
-  name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
+
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
 
-const getCourseKeys = (obj) => {
-  let info = Object.keys(obj);
-  return info;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -39,13 +36,7 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  let checkedVal = Object.values(obj);
-  if (value === checkedVal) {
-    return true;
-  }
-  else {
-    return false;
-  }
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -124,7 +115,7 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
- let newHouse = Object.
+
   return houses;
 };
 
