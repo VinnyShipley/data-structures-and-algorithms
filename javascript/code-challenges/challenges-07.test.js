@@ -25,11 +25,9 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-  let newArr = starWarsArr.forEach((i) => {
-    let heightArr = i.height;
-    return heightArr;
-  });
-
+  let newStarArr = starWarsArr.sort((a, b) => b - a);
+  console.log(newStarArr);
+  return newStarArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -39,16 +37,8 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  let newArr = [];
-  arr.forEach(i => {
-    if ((arr[i] === idx) && (arr[i] === idx + 3)) {
-      return arr.splice(i);
-    }
-    else {
-      return newArr.push(i);
-    }
-  });
-  console.log(newArr);
+  arr.splice(idx, 3);
+  return arr;
 };
 
 //Gets the three values sliced out, but only returns the sliced elements

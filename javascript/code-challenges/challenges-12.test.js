@@ -7,7 +7,9 @@ Write a function named replaceZeros that, given a string, uses Regex to replace 
 ------------------------------------------------------------------------------------------------ */
 
 const replaceZeros = (string) => {
-  // Solution code here...
+  let regex = /0+/g;
+  let newStr = string.replace(regex, 'zero');
+  return newStr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -19,8 +21,9 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePin = (pin) => {
-  let regex = /(?:\d{4})/;
+  let regex = /\d{4}/;
   let newPin = regex.test(pin);
+  console.log(newPin);
   return newPin;
 };
 
