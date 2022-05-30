@@ -9,7 +9,8 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-
+  let getMax = (a, b) => Math.max(a, b);
+  return arr.reduce(getMax);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -22,10 +23,10 @@ For example: (['name', 'duration', 'topics', 'finalExam']).
 
 //   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
 //   finalExam: true
-// };
-
-
-// };
+const getCourseKeys = (courseInfo) => {
+  let keys = Object.keys(courseInfo);
+  return keys;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -36,7 +37,10 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
+  let checkedVal = Object.values(obj);
+  obj.map((i) => {
 
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -132,8 +136,18 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
-
+  let kids = 0;
+  arr.forEach(person => {
+    if (person.name === character) {
+      console.log(person);
+      Object.keys(person).forEach((key, idx) => {
+        if (key === 'children') {
+          kids = Object.values(person)[idx].length;
+        }
+      });
+    }
+  });
+  return kids ? true : false;
 };
 
 /* ------------------------------------------------------------------------------------------------
