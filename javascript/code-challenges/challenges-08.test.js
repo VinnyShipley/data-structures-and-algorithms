@@ -57,8 +57,10 @@ const sortByChildren = (charArray) => {
     if (a.children.length > b.children.length) {
       return 1;
     }
-    else if (a.child.length < b.child.length) {
+    else if (a.children.length < b.children.length) {
       return -1;
+    } else {
+      return a.house > b.house ? 1 : -1;
     }
   });
 };
@@ -116,12 +118,13 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let newArr = [];
-  let regex = /^[A-Z]/;
-  let splitStr = str.split(' ');
-  splitStr.map(i => regex.test(i) ? newArr.push(i) : null);
-  return newArr;
-
+  let regex = /(?:[A-Z]\w+)/mg;
+  if (regex.test(str) === true) {
+    let newArr = str.match(regex);
+    return newArr;
+  } else {
+    return [];
+  }
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -131,8 +134,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   let regex = /^[A-J]/;
-  let newArr = regex.test(arr);
-  return newArr;
+  return arr.filter(city => regex.test(city));
 };
 
 /* ------------------------------------------------------------------------------------------------
