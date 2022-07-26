@@ -22,5 +22,6 @@ To run your tests
 
 ## Table of Contents:
 
-* [Linked Lists]()
-* [Linked List Insertions](python/docs/linked_list_insertions/README.md)
+- [Linked Lists](python/docs/linked_list/README.md)
+
+- [Linked List Insertions](python/docs/linked_list_insertions/README.md)
