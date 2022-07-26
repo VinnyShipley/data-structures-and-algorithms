@@ -46,11 +46,6 @@ class LinkedList:
                 current = Node(value = new_val)
                 current.next = current.next
 
-
-
-
-
-
 class Node:
     def __init__(self, value):
         self.value = value
