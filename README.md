@@ -18,10 +18,9 @@ To run your tests
 - run `npm test` to run all of the tests
 - run `npm test ##` to only run tests for challenge ## (i.e. 01)
 
-### 401 Data Structures, Code Challenges
-
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+### Python 401 Data Structures, Code Challenges
 
 ## Table of Contents:
 
 * [Linked Lists]()
+* [Linked List Insertions](python/docs/linked_list_insertions/README.md)
