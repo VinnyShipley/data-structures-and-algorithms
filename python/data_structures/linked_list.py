@@ -9,7 +9,7 @@ class LinkedList:
 
 
     def insert(self, val):
-        if self.name is None:
+        if self.head is None:
             return 'NULL'
         if self.head == None:
             self.head = Node(val)
