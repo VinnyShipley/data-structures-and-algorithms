@@ -1,6 +1,6 @@
 # Challenge Summary
 
-Create a method that when fired will take in an argument, k, and return the value of the node the kth value away from the end of the node list.
+Create a method that when fired will take in an argument, called k, and return the value of the node the kth value away from the end of the node list.
 
 ## Whiteboard Process
 
