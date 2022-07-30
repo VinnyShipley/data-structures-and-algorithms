@@ -4,7 +4,7 @@ def zip_lists(a, b):
     new_list = LinkedList()
     # counter for list a
     n = 0
-    # counter for list b 
+    # counter for list b
     k = 0
     current_a_node = a.head
     current_b_node = b.head
@@ -50,3 +50,4 @@ def zip_lists(a, b):
                 return new_list
 
     return new_list
+
