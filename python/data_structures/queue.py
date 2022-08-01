@@ -3,41 +3,52 @@ from data_structures.invalid_operation_error import InvalidOperationError
 
 class Queue:
     """
-    Put docstring here
+    Queue is a linear data structure that stores items in a First-In/First Out(FIFO) manner. In queue, the data element that is inserted first will be removed first.
     """
 
     def __init__(self, front=None, rear=None):
         self.front = front
         self.rear = rear
 
-
+    # Adds item to queue
     def enqueue(self, value):
+        # Creates new node to be added to rear
         new_rear = Node(value)
 
+        #places the new node at the rear if there is no rear, and also declared the rear aas the new front
         if not self.rear:
             self.rear = new_rear
             self.front = new_rear
 
+        # places the new node at the rear of the queue
         else:
             new_rear.next = None
             self.rear.next = new_rear
 
 
+    #removes the node from the front of the queue
     def dequeue(self):
+
+        #checks if queue is empty, and returns error if empty
         if self.is_empty():
             raise InvalidOperationError('InvalidOperationError')
-        temp = self.front
-        self.front = self.front.next
-        temp.next = None
-        return temp.value
 
+        # if non-empty list
+        else:
+            temp = self.front
+            self.front = self.front.next
+            temp.next = None
+            return temp.value
+
+
+    #peek method
     def peek(self):
         if self.is_empty():
-            raise InvalidOperationError('InvalidOperationError')
+            raise InvalidOperationError('Method not allowed on empty collection')
         else:
             return self.front.value
 
-    def is_empty(self):
-        if self.front == None:
-            return True
 
+    # asserts that the front of the list is None. Is essentially a logic value to check against.
+    def is_empty(self):
+        return self.front is None
