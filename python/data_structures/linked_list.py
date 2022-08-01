@@ -47,19 +47,21 @@ class LinkedList:
     def insert_before(self, val, new_val):
         current = self.head
         new_node = Node(new_val)
-        print(new_node)
         if self.head.value == val:
             self.insert(new_val)
             return
-        while current.next != None:
-            if current.next != val:
+
+        while current and current.next:
+            if current.next == val:
+                new_node.next = current.next
+                current.next = new_node
+                return self.__str__()
+            else:
                 current.value = current.next
                 continue
-            else:
-                current.next = new_node.value
-                new_node.next = val
-                return
-        return
+
+        raise TargetError
+
 
 
     # kth from the end function

@@ -15,7 +15,7 @@ class Queue:
         # Creates new node to be added to rear
         new_rear = Node(value)
 
-        #places the new node at the rear if there is no rear, and also declared the rear aas the new front
+        #places the new node at the rear if there is no rear, and also declared the rear as the new front
         if not self.rear:
             self.rear = new_rear
             self.front = new_rear
@@ -24,6 +24,7 @@ class Queue:
         else:
             new_rear.next = None
             self.rear.next = new_rear
+            self.rear = new_rear
 
 
     #removes the node from the front of the queue
