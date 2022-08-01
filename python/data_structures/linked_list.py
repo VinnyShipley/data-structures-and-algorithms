@@ -46,31 +46,42 @@ class LinkedList:
     # Insert before function
     def insert_before(self, val, new_val):
         current = self.head
+        new_node = Node(new_val)
+        print(new_node)
+        if self.head.value == val:
+            self.insert(new_val)
+            return
         while current.next != None:
-            if current.next.new_val == val:
-                current = Node(value = new_val)
-                current.next = current.next
+            if current.next != val:
+                current.value = current.next
+                continue
+            else:
+                current.next = new_node.value
+                new_node.next = val
+                return
+        return
+
 
     # kth from the end function
-    def kth_from_end(self, k):
-        length = 0
-        current = self.head
-        if k < 0:
-            raise TargetError
-        if current == None:
-            raise TargetError
-        while current != None:
-            length += 1
-            current = current.next
-        needed_steps = (length - 1) - k
-        if needed_steps < 0:
-            raise TargetError
-        current = self.head
-        while needed_steps > 0:
-            needed_steps -= 1
-            current = current.next
-        print(current)
-        return current.value
+    # def kth_from_end(self, k):
+    #     length = 0
+    #     current = self.head
+    #     if k < 0:
+    #         raise TargetError
+    #     if current == None:
+    #         raise TargetError
+    #     while current != None:
+    #         length += 1
+    #         current = current.next
+    #     needed_steps = (length - 1) - k
+    #     if needed_steps < 0:
+    #         raise TargetError
+    #     current = self.head
+    #     while needed_steps > 0:
+    #         needed_steps -= 1
+    #         current = current.next
+    #     print(current)
+    #     return current.value
 
 
 class Node:
