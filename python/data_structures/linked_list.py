@@ -51,28 +51,26 @@ class LinkedList:
 
         if current == None:
             raise TargetError()
+
         if self.head.value == val:
             new_node.next = self.head
             self.head = new_node
             return
 
-        while current.next.value != val:
-            current.value = current.next.value
+        while current.next and current.next.value != val:
+            current = current.next
 
 
         print(current.next.value)
         if current.next.value is None and current.next.value != val:
             raise TargetError()
 
+        if current.next is None and current.value != val:
+            raise TargetError
+
         else:
-            # print(current.next.value)
-            # print(f'this is new node value {new_node.value}')
-            # print(f'this is new node next {new_node.next}')
-            # print(f'this is current next value {current.next.value}')
-            temp = current.next
-            current.next.value = new_node.value
-            new_node.next = temp
-            print(f'this is the new current next value {current.next.value}')
+            new_node.next = current.next
+            current.next = new_node
 
 
 
