@@ -39,5 +39,3 @@ class Stack:
             raise InvalidOperationError('Method not allowed on empty collection')
         else:
             return self.top.value
-
-

@@ -25,3 +25,7 @@ To run your tests
 - [Linked Lists](python/docs/linked_list/README.md)
 
 - [Linked List Insertions](python/docs/linked_list_insertions/README.md)
+
+- [Stack and Queue Implementation](python/docs/stack_and_queue/README.md)
+
+- [Stack and Queue Pseudo](python/docs/stack_queue_pseudo/README.md)
