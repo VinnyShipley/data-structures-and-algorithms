@@ -3,7 +3,8 @@
 Without using the pre-existing queue class use two stacks to implement the enqueuing and dequeing methods
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+
+![Whiteboard](stack_queue_pseudo_whiteboard.png)
 
 ## Approach & Efficiency
 
