@@ -16,6 +16,7 @@ class LinkedList:
         while current:
             text += '{ ' + str(current.value) + ' } -> '
             current = current.next
+            print(text + 'NULL')
         return text + 'NULL'
 
     # Insert Function
@@ -45,22 +46,40 @@ class LinkedList:
 
     # Insert before function
     def insert_before(self, val, new_val):
-        current = self.head
         new_node = Node(new_val)
+        current = self.head
+
+        if current == None:
+            raise TargetError()
         if self.head.value == val:
-            self.insert(new_val)
+            new_node.next = self.head
+            self.head = new_node
             return
 
-        while current and current.next:
-            if current.next == val:
-                new_node.next = current.next
-                current.next = new_node
-                return self.__str__()
-            else:
-                current.value = current.next
-                continue
+        while current.next.value != val:
+            current.value = current.next.value
 
-        raise TargetError
+
+        print(current.next.value)
+        if current.next.value is None and current.next.value != val:
+            raise TargetError()
+
+        else:
+            # print(current.next.value)
+            # print(f'this is new node value {new_node.value}')
+            # print(f'this is new node next {new_node.next}')
+            # print(f'this is current next value {current.next.value}')
+            temp = current.next
+            current.next.value = new_node.value
+            new_node.next = temp
+            print(f'this is the new current next value {current.next.value}')
+
+
+
+
+
+
+
 
 
 
