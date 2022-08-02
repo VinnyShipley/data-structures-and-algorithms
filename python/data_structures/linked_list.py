@@ -72,7 +72,8 @@ class LinkedList:
             new_node.next = current.next
             current.next = new_node
 
-
+    def insert_after(self):
+        pass
 
 
 
