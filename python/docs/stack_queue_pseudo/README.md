@@ -14,3 +14,4 @@ The Big(O) for time would be O(2N) due to the fact that the algorithm has to uns
 
 Big(O) for space would be O(1) because the output in the current state of the algorithm will only ever be one node length longer than the original stack.
 
+[Link to code](python/code_challenges/stack_queue_pseudo.py)
