@@ -29,3 +29,5 @@ To run your tests
 - [Stack and Queue Implementation](python/docs/stack_and_queue/README.md)
 
 - [Stack and Queue Pseudo](python/docs/stack_queue_pseudo/README.md)
+
+- [Stack and Queue Animal Shelter](python/docs/stack_queue_animal_shelter/README.md)

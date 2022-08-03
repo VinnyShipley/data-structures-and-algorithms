@@ -14,4 +14,4 @@ For time it is also O(1) due to the fact that the methods built here will only e
 
 [Link to Stack code](python/data_structures/stack.py)
 
-[Link to Queue code](python/data_structures/queue.py)
+[Link to Queue code](python/data_structures/queue.pycd )
