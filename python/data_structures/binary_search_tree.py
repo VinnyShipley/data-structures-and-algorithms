@@ -10,31 +10,30 @@ class BinarySearchTree(BinaryTree):
         super().__init__()
 
     def add(self,value):
-        self.root = Node(value)
-
-
-    def add_left(self,value):
-
-
         if not self.root:
             self.root = Node(value)
-
-        def walk(root, node_to_add):
-            if root is None:
-                return
-
-            if node_to_add.value < root.value:
-                if not root.left:
-                    root.left = node_to_add
-
-                else:
-                    walk(root.left, node_to_add)
-
+        if value < self.root.value:
+            if not self.root.left:
+                self.root.left = Node(value)
             else:
-                if root.right is None:
-                    root.right = node_to_add
+                walk(self.root.left, value)
 
-        walk(self, value)
+
+
+            if not self.root.right:
+                self.root.right = Node(value)
+
+    def walk(root, target):
+        if root is None:
+                return
+        if root
+
+
+
+
+
+
+
 
 
     def contains(self, target):
