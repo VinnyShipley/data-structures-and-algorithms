@@ -2,39 +2,35 @@ from data_structures.binary_tree import BinaryTree, Node
 
 
 class BinarySearchTree(BinaryTree):
-    """
-    Put docstring here
-    """
 
-    def __init__(self):
-        super().__init__()
 
-    def add(self,value):
+    def add_to_empty(self, value):
+        self.root = Node(value)
+
+    def add(self, value):
+
+        node = Node(value)
+
         if not self.root:
-            self.root = Node(value)
-        if value < self.root.value:
-            if not self.root.left:
-                self.root.left = Node(value)
-            else:
-                walk(self.root.left, value)
+            self.root = node
 
-
-
-            if not self.root.right:
-                self.root.right = Node(value)
-
-    def walk(root, target):
-        if root is None:
+        def walk(root, node_to_add):
+            if root is None:
                 return
-        if root
 
+            if node_to_add.value < root.value:
+                if not root.left:
+                    root.left = node_to_add
+                else:
+                    walk(root.left, node_to_add)
 
+            if node_to_add.value > root.value:
+                if not root.right:
+                    root.right = node_to_add
+                else:
+                    walk(root.right, node_to_add)
 
-
-
-
-
-
+        walk(self.root, node)
 
     def contains(self, target):
 
@@ -46,8 +42,8 @@ class BinarySearchTree(BinaryTree):
                 return True
 
             if root.value > target:
-                walk(root.left)
+                return walk(root.left)
             else:
-                walk(root.right)
+                return walk(root.right)
 
         return walk(self.root)
