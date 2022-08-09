@@ -17,4 +17,3 @@ Big O for time will be O(N) as well because it needs to travel every node of the
 Run the code by following the link below to see it, and test it by using pytest on the test_breadth_first.py file
 
 [Link to Code](python/code_challenges/tree_breadth_first.py)
-

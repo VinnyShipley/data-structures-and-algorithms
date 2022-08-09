@@ -32,4 +32,6 @@ To run your tests
 
 - [Stack and Queue Animal Shelter](python/docs/stack_queue_animal_shelter/README.md)
 
+- [Trees](python/docs/trees/README.md)
+
 - [Binary Tree Breadth First](python/docs/tree_breadth_first/README.md)
