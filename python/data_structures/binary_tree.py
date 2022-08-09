@@ -65,7 +65,6 @@ class BinaryTree:
         def walk(root):
             nonlocal max
             if root.value:
-                print('this is None')
                 if root.value > max:
                     max = root.value
                     if root.left:
