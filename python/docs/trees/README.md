@@ -14,7 +14,7 @@ For the contains method in the binary search tree, the Big O for space is O(1) a
 
 ## Solution
 
-Run the code for each file by running pytest on it's respective python test file. 
+Run the code for each file by running pytest on it's respective python test file.
 
 [Link to Binary Tree Code](python/data_structures/binary_tree.py)
 
