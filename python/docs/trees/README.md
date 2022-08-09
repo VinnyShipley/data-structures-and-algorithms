@@ -19,3 +19,21 @@ Run the code for each file by running pytest on it's respective python test file
 [Link to Binary Tree Code](python/data_structures/binary_tree.py)
 
 [Link to Binary Search Tree](python/data_structures/binary_search_tree.py)
+
+# Challenge Summary
+
+Create a method that when called, finds the largest node value in the binary tree
+
+## Whiteboard Process
+
+[Binary Tree Max Whiteboard](python/docs/trees/challenge_17_whiteboard.png)
+
+## Approach & Efficiency
+
+The Big O for space would be O(1) because no matter how big of a node list the method will be called on, the output will always be one integer.
+
+For time the Big O will be O(N) because the time it needs to cycle through the entire list will go up linearly with each node that is contained within the tree.
+
+## Solution
+
+Testing the code can be done by running pytest on the test_tree_max.py file

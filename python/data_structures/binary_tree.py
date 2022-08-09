@@ -60,6 +60,29 @@ class BinaryTree:
         walk(self.root)
         return values
 
+    def find_maximum_value(self):
+        max = 0
+        def walk(root):
+            nonlocal max
+            if root.value:
+                if root.value > max:
+                    max = root.value
+                    if root.left:
+                        walk(root.left)
+                    if root.right:
+                        walk(root.right)
+                    return max
+                if root.value <= max:
+                    if root.left:
+                        walk(root.left)
+                    if root.right:
+                        walk(root.right)
+                    return max
+            else:
+                return max
+        max = walk(self.root)
+        return max
+
 
 
 class Node:
