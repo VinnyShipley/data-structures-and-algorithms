@@ -3,8 +3,10 @@ from data_structures.kary_tree import Node, KaryTree, Queue
 
 
 
-def fizz_buzz_tree(original_tree):
+def fizz_buzz_tree(tree):
+    original_tree = KaryTree(tree)
     fizz_tree = original_tree.clone_self()
+    original_tree == original_tree
     breadth = Queue()
     breadth.enqueue(fizz_tree.root)
     while not breadth.is_empty():
