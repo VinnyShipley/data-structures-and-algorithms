@@ -2,7 +2,6 @@ from data_structures.kary_tree import Node, KaryTree, Queue
 
 
 
-
 def fizz_buzz_tree(tree):
     original_tree = KaryTree(tree)
     fizz_tree = original_tree.clone_self()
