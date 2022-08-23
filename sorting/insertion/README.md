@@ -39,4 +39,43 @@ The Big O for space would be O(1) because the returned list will only ever be as
 
 ## Solution
 
-[Link to the Code](python/code_challenges/insertion_sort.py)
+Code:
+
+    def insertion_sort(arr):
+
+      for i in range(1, len(arr)):
+        j = i - 1
+        temp = arr[i]
+
+        while j >= 0 and temp < arr[j]:
+          arr[j + 1] = arr[j]
+          j = j - 1
+        arr[j + 1] = temp
+
+      return arr
+
+Test code:
+
+    def test_length_zero():
+      arr = []
+      actual = insertion_sort(arr)
+      expected = []
+      assert actual == expected
+
+    def test_length_one():
+      arr = [5]
+      actual = insertion_sort(arr)
+      expected = [5]
+      assert actual == expected
+
+    def test_non_repeat_list():
+      arr = [5, 6, 4, 2, 1, 3]
+      actual = insertion_sort(arr)
+      expected = [1, 2, 3, 4, 5, 6]
+      assert actual == expected
+
+    def test_repeated_list():
+      arr = [5, 5, 6, 4, 2, 1, 3]
+      actual = insertion_sort(arr)
+      expected = [1, 2, 3, 4, 5, 5, 6]
+      assert actual == expected
