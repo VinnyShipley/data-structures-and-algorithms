@@ -48,6 +48,6 @@ def merge(left, right, arr):
 
 
 if __name__ == '__main__':
-  old_list = [5,2,9,17,1,4]
+  old_list = [5,2,9,17,1,4, 14, 15,39,6]
   print(old_list)
   print(merge_sort(old_list))
