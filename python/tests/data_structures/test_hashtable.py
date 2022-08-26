@@ -18,3 +18,19 @@ def test_exists():
 def test_null_key():
     pass
 
+def test_contains():
+    table = Hashtable()
+    table.set('apple', 'banana')
+    actual = table.contains('apple')
+    expected = True
+    assert actual == expected
+
+
+def test_keys():
+    table = Hashtable
+    table.set('apple', 'banana')
+    table.set('attack', 'defend')
+    keys = table.keys()
+    actual = keys
+    expected = ['apple', 'attack']
+    assert actual == expected
