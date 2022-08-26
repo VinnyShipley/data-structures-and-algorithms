@@ -47,10 +47,21 @@ class Hashtable:
                 if key_value_pair[0] == key:
                     return True
                 current = current.next
-        return False
+
 
     def get(self, key):
-        pass
+        index = self.hash(key)
+        bucket = self.buckets[index]
+        if not bucket:
+            return False
+        if bucket:
+            current = bucket.head
+            while current:
+                key_value_pair = current.value
+                if key_value_pair[0] == key:
+                    return True
+                current = current.next
+        return False
 
 
     def keys(self):
@@ -59,6 +70,7 @@ class Hashtable:
             if bucket:
                 current = bucket.head
                 while current:
+                    print(current.value)
                     keys_list.append(current.value[0])
                     current = current.next
         return keys_list

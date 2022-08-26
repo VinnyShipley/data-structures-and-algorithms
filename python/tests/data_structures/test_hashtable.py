@@ -27,10 +27,15 @@ def test_contains():
 
 
 def test_keys():
-    table = Hashtable
+    table = Hashtable()
     table.set('apple', 'banana')
     table.set('attack', 'defend')
     keys = table.keys()
     actual = keys
     expected = ['apple', 'attack']
     assert actual == expected
+
+
+
+# def test_get():
+#     table =
