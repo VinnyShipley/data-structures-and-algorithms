@@ -4,9 +4,12 @@ import re
 
 def first_repeated_word(string):
     table = Hashtable()
-    words = re.findall(r"\b[a-zA-Z]\w+\b", string)
+    filtered = re.sub(r'^\W+|$\W+', ' ', string)
+    words = re.findall(r"\b[a-zA-Z]\w+\b", filtered)
+    print(words)
     for word in words:
         lower_word = str(word).lower()
+        print(lower_word)
         if table.contains(lower_word):
             return lower_word
         if not table.contains(lower_word):
@@ -22,7 +25,7 @@ story = "It was the best of times, it was the worst of times, it was the age of 
 first_repeated_word(story)
 
 
-
+r"\b[a-zA-Z]\w+\b"
 
 
 
