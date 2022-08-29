@@ -34,14 +34,14 @@ def test_contains_multiple():
     assert actual == expected
 
 
-# def test_keys():
-#     table = Hashtable()
-#     table.set('apple', 'banana')
-#     table.set('attack', 'defend')
-#     keys = table.keys()
-#     actual = keys
-#     expected = ['apple', 'attack']
-#     assert actual == expected
+def test_keys():
+    table = Hashtable()
+    table.set('apple', 'banana')
+    table.set('attack', 'defend')
+    keys = table.keys()
+    actual = keys
+    expected = ['apple', 'attack']
+    assert actual == expected
 
 
 
