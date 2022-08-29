@@ -59,7 +59,7 @@ class Hashtable:
             while current:
                 key_value_pair = current.value
                 if key_value_pair[0] == key:
-                    return True
+                    return key_value_pair[1]
                 current = current.next
         return False
 
@@ -69,10 +69,10 @@ class Hashtable:
         for bucket in self.buckets:
             if bucket:
                 current = bucket.head
+                print(current)
                 while current:
-                    print(current.value)
-                    keys_list.append(current.value[0])
-                    current = current.next
+                    value = current.value
+                    keys_list.append(value[0])
         return keys_list
 
 
