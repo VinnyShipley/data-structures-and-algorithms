@@ -25,6 +25,14 @@ def test_contains():
     expected = True
     assert actual == expected
 
+def test_contains_multiple():
+    table = Hashtable()
+    table.set('apple', 'banana')
+    table.set('attack', 'defend')
+    actual = table.contains('attack')
+    expected = True
+    assert actual == expected
+
 
 def test_keys():
     table = Hashtable()
@@ -37,5 +45,11 @@ def test_keys():
 
 
 
-# def test_get():
-#     table =
+def test_get():
+    table = Hashtable()
+    table.set('apple', 'banana')
+    actual = table.get('apple')
+    expected = 'banana'
+    assert actual == expected
+
+

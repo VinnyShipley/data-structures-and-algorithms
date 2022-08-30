@@ -18,7 +18,7 @@ class Hashtable:
 
             bucket = LinkedList()
             self.buckets[index] = bucket
-            bucket.head = key_value_tuple
+
 
         bucket.insert(key_value_tuple)
 
@@ -53,15 +53,14 @@ class Hashtable:
         index = self.hash(key)
         bucket = self.buckets[index]
         if not bucket:
-            return False
+            return None
         if bucket:
             current = bucket.head
             while current:
                 key_value_pair = current.value
                 if key_value_pair[0] == key:
-                    return True
+                    return key_value_pair[1]
                 current = current.next
-        return False
 
 
     def keys(self):
@@ -69,15 +68,13 @@ class Hashtable:
         for bucket in self.buckets:
             if bucket:
                 current = bucket.head
+                print(current.value[0])
                 while current:
-                    print(current.value)
+                    print(current.value[0])
                     keys_list.append(current.value[0])
+                    print(keys_list)
                     current = current.next
         return keys_list
-
-
-
-
 
 
 

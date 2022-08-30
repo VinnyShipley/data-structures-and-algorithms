@@ -21,9 +21,9 @@ class LinkedList:
 
     # Insert Function
     def insert(self, val):
-            old_head = self.head
-            self.head = Node(val)
-            self.head.next = old_head
+            new_node = Node(val)
+            new_node.next = self.head
+            self.head = new_node
 
     # Includes function
     def includes(self, value):
