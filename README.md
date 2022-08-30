@@ -41,3 +41,5 @@ To run your tests
 - [Tree Fizz-Buzz](python/docs/tree_fizz_buzz/README.md)
 
 - [Insertion Sort](sorting/insertion/README.md)
+
+- [Hashmap repeated words](python/docs/hashtable_repeated_word/README.md)
