@@ -68,11 +68,8 @@ class Hashtable:
         for bucket in self.buckets:
             if bucket:
                 current = bucket.head
-                print(current.value[0])
                 while current:
-                    print(current.value[0])
                     keys_list.append(current.value[0])
-                    print(keys_list)
                     current = current.next
         return keys_list
 

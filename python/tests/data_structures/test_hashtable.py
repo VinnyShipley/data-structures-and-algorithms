@@ -52,4 +52,3 @@ def test_get():
     expected = 'banana'
     assert actual == expected
 
-
