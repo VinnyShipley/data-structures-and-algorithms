@@ -43,3 +43,5 @@ To run your tests
 - [Insertion Sort](sorting/insertion/README.md)
 
 - [Hashmap repeated words](python/docs/hashtable_repeated_word/README.md)
+
+- [Graphs](python/docs/graph/README.md)
