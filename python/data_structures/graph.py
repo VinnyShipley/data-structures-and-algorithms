@@ -1,4 +1,3 @@
-from shelve import Shelf
 from .queue import Queue
 
 class Graph:
